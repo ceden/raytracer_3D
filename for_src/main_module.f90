@@ -23,6 +23,7 @@ module main_module
   real*8 :: Lz ! water depth in m
   real*8 :: f0 = 1d-4 ! Coriolis parameter in 1/s
   real*8 :: k_fixed=0d0,l_fixed=0d0,m_fixed=0d0 ! wavenumbers in case that nk/nl/nm=1
+  real*8 :: sign_of_omega_i = +1d0
 !---------------------------------------------------------------------------------
 ! switches for general model setup
 !---------------------------------------------------------------------------------  
