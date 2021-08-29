@@ -17,7 +17,7 @@ subroutine calc_parameter
      do j=ys_pe-onx,ye_pe+onx  
       do i=xs_pe-onx,xe_pe+onx 
        kh2 = lt(n)**2 + kt(l)**2
-       omega_i(i,j,k,l,n,m) = sqrt(  (Nsqr(i,j,k)*kh2+f0**2*mt(m)**2)/(mt(m)**2+kh2) )
+       omega_i(i,j,k,l,n,m) = sign_of_omega_i*sqrt(  (Nsqr(i,j,k)*kh2+f0**2*mt(m)**2)/(mt(m)**2+kh2) )
        omega_e(i,j,k,l,n,m) = omega_i(i,j,k,l,n,m) + kt(l)*U(i,j,k) + lt(n)*V(i,j,k)
       enddo
      enddo
