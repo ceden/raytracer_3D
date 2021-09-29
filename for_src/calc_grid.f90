@@ -179,54 +179,54 @@ subroutine calc_grid
 
   ! print some infos
   if (my_pe==0) then
-   print*,
+   print*,''
    print'(a)','Grid setup: '
-   print*,
+   print*,''
    print'(a,i4,a)',' with ',nx,' grid points in x-direction:'
    print'(a,f8.1,a,f8.1,a)',' from xt(1) = ',xt_gl(1) ,' m to xt(nx) = ',xt_gl(nx),' m'
    print'(a,f8.1,a,f8.1,a)',' with dxt(1)= ',dxt_gl(1),' m to dxt(nx)= ',dxt_gl(nx),' m'
-   print*,
+   print*,''
    print'(a,i4,a)',' with ',ny,' grid points in y-direction:'
    print'(a,f8.1,a,f8.1,a)',' from yt(1) = ',yt_gl(1) ,' m to yt(ny) = ',yt_gl(ny),' m'
    print'(a,f8.1,a,f8.1,a)',' with dyt(1)= ',dyt_gl(1),' m to dyt(ny)= ',dyt_gl(ny),' m'
-   print*,
+   print*,''
    print'(a,i4,a)',' with ',nz,' grid points in z-direction:'
    print'(a,f8.2,a,f8.2,a)',' from zt(1) = ',zt_gl(1) ,' m to zt(nz) = ',zt_gl(nz),' m'
    print'(a,f8.2,a,f8.2,a)',' with dzt(1)= ',dzt_gl(1),' m to dzt(nz)= ',dzt_gl(nz),' m'
-   print*,
+   print*,''
    print'(a,f8.2,a,f8.2,a)',' from zu(1) = ',zu_gl(1) ,' m to zu(nz) = ',zu_gl(nz),' m'
    print'(a,f8.2,a,f8.2,a)',' with dzu(1)= ',dzu_gl(1),' m to dzu(nz)= ',dzu_gl(nz),' m'
-   print*,
+   print*,''
    print'(a,i4,a)',' with ',nk,' grid points in k-direction:'
    print'(a,e12.4,a,e12.4,a)',' from kt(1) = ',kt_gl(1) ,' 1/m to kt(nk) = ',kt_gl(nk),' 1/m'
    print'(a,e12.4,a,e12.4,a)',' with dkt(1)= ',dkt_gl(1),' 1/m to dkt(nk)= ',dkt_gl(nk),' 1/m'
-   print*,
+   print*,''
    print'(a,i4,a)',' with ',nl,' grid points in l-direction:'
    print'(a,e12.4,a,e12.4,a)',' from lt(1) = ',lt_gl(1), ' 1/m to lt(nl) = ',lt_gl(nl),' 1/m'
    print'(a,e12.4,a,e12.4,a)',' with dlt(1)= ',dlt_gl(1),' 1/m to dlt(nl)= ',dlt_gl(nl),' 1/m'
-   print*,
+   print*,''
    print'(a,i4,a)',' with ',nm,' grid points in m-direction:'
    print'(a,e12.4,a,e12.4,a)',' from mt(1) = ',mt_gl(1) ,' 1/m to mt(nm) = ',mt_gl(nm),' 1/m'
    print'(a,e12.4,a,e12.4,a)',' with dmt(1)= ',dmt_gl(1),' 1/m to dmt(nm)= ',dmt_gl(nm),' 1/m'
-   print*, 
+   print*,'' 
   endif 
   
   if (my_pe==0 .and. enable_show_grid_details) then
-   print*, 
+   print*, ''
    print*,' x grid details: '
    do i=1,nx
      print'(a,i3,a,f8.2,a,i3,a,f8.2,a,i3,a,f8.2,a,i3,a,f8.2 )',&
                         ' xt(',i,')=',xt_gl(i),' xu(',i,')=',xu_gl(i), &
                         ' dxt(',i,')=',dxt_gl(i),' dxu(',i,')=',dxu_gl(i)
    enddo
-   print*, 
+   print*, ''
    print*,' y grid details: '
    do i=1,ny
      print'(a,i3,a,f8.2,a,i3,a,f8.2,a,i3,a,f8.2,a,i3,a,f8.2 )',&
                         ' yt(',i,')=',yt_gl(i),' yu(',i,')=',yu_gl(i), &
                         ' dyt(',i,')=',dyt_gl(i),' dyu(',i,')=',dyu_gl(i)
    enddo  
-   print*, 
+   print*, ''
    print*,' z grid details: '
    do i=1,nz
      print'(a,i3,a,f8.2,a,i3,a,f8.2,a,i3,a,f8.2,a,i3,a,f8.2 )',&
@@ -234,21 +234,21 @@ subroutine calc_grid
                         ' dzt(',i,')=',dzt_gl(i),' dzu(',i,')=',dzu_gl(i)
    enddo
 
-   print*, 
+   print*,'' 
    print*,' k grid details: '
    do i=1,nk
      print'(a,i3,a,e12.4,a,i3,a,e12.4,a,i3,a,e12.4,a,i3,a,e12.4 )',&
                         ' kt(',i,')=',kt_gl(i),' ku(',i,')=',ku_gl(i), &
                         ' dkt(',i,')=',dkt_gl(i),' dku(',i,')=',dku_gl(i)
    enddo
-   print*, 
+   print*, ''
    print*,' l grid details: '
    do i=1,nl
      print'(a,i3,a,e12.4,a,i3,a,e12.4,a,i3,a,e12.4,a,i3,a,e12.4 )',&
                         ' lt(',i,')=',lt_gl(i),' lu(',i,')=',lu_gl(i), &
                         ' dlt(',i,')=',dlt_gl(i),' dlu(',i,')=',dlu_gl(i)
    enddo   
-   print*, 
+   print*, ''
    print*,' m grid details: '
    do i=1,nm
      print'(a,i3,a,e12.4,a,i3,a,e12.4,a,i3,a,e12.4,a,i3,a,e12.4 )',&
