@@ -21,12 +21,12 @@
 #F90 = gfortran 
 #CDFFLAGS = -I/usr/include -lnetcdf -lnetcdff 
 #MPIFLAGS = -I/usr/include/mpi -lmpi -lmpi_f77 
-#F90FLAGS = -Wall -O3  -fbounds-check -finit-real=nan
+#F90FLAGS = -Wall -O3  -fbounds-check -finit-real=nan -fallow-argument-mismatch
 
 # for OSX
 F90 =  mpif90
 CDFFLAGS = -I/usr/local/include -lnetcdff -lnetcdf -lnetcdf
 MPIFLAGS =  
-F90FLAGS = -Wall -O3 -fbounds-check -finit-real=nan
+F90FLAGS = -Wall -O3 -fbounds-check -finit-real=nan -fallow-argument-mismatch
 
 
