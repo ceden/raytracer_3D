@@ -26,8 +26,8 @@ subroutine superbee_fluxes
           IF (xdot(i,j,k,l,n,m).GT.0) THEN; Cr=Rjm*1.E20; ELSE; Cr=Rjp*1.E20; ENDIF
          ENDIF
          Cr=Limiter(Cr)
-         flux_x(i,j,k,l,n,m) = ydot(i,j,k,l,n,m)*(E(i+1,j,k,l,n,m)+E(i,j,k,l,n,m))*0.5d0   &
-                          -ABS(ydot(i,j,k,l,n,m))*((1.-Cr)+uCFL*Cr)*Rj*0.5d0
+         flux_x(i,j,k,l,n,m) = xdot(i,j,k,l,n,m)*(E(i+1,j,k,l,n,m)+E(i,j,k,l,n,m))*0.5d0   &
+                          -ABS(xdot(i,j,k,l,n,m))*((1.-Cr)+uCFL*Cr)*Rj*0.5d0
       enddo
      enddo
     enddo
